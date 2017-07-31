@@ -10,4 +10,4 @@ You'll notice that the lua scripts in Homebrew look a little bit different then 
 most importantly, they all follow very strict coding rules. [See Examples](Examples/Flashlight.lua)
 
 
-We've also worked up a simple example on how you go about creating a custom Gadget, See [Tutorial](GadgetTutorial.md)
+We've also worked up a simple example on how you go about creating a custom Gadget, See [Tutorial](GadgetTutorial)
