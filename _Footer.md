@@ -1,4 +1,3 @@
-***
 ![logo](http://i.imgur.com/sFBXqna.png)
 
-Copybugpaste Team
+Copybugpaste Team 2017
