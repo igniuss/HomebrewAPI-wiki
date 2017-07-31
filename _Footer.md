@@ -1,4 +1,4 @@
 ***
-![logo](http://i.imgur.com/L6EC09A.png)
+![logo](http://i.imgur.com/sFBXqna.png)
 
 Copybugpaste Team
