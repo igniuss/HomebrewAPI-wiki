@@ -3,7 +3,10 @@
 ## Introduction
 In this quick little tutorial, we'll make a flashlight, which you can toggle on and off, as a gadget.
 
-Start by opening up your Lua location (``c:/users/[your-username]/appdata/locallow/CopyBugPaste/Homebrew14/Lua/GadgetLua``)
+Start by opening up your Lua location 
+
+(``c:/users/[your-username]/appdata/locallow/CopyBugPaste/Homebrew14/Lua/GadgetLua``)
+
 We'll need to make a couple of files to get a fully working gadget. 
 First create a new lua file, called Flashlight
 
