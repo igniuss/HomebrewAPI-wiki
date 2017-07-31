@@ -1,3 +1,5 @@
-![logo](http://i.imgur.com/sFBXqna.png)
+**Dream-Build-Enjoy**
 
-Copybugpaste Team 2017
+***
+
+*CopyBugPaste Team* 
