@@ -1,5 +1,3 @@
-**Dream-Build-Enjoy**
+# Dream-Build-Enjoy
 
-***
-
-*CopyBugPaste Team* 
+-CopyBugPaste Team-
