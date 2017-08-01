@@ -9,8 +9,8 @@ It's fairly easy to send specific kind of logs using the default Unity "Debug" c
 
 ```lua
 Debug.Log("This is a regular log")
-Debug.Warning("This is a warning")
-Debug.Error("This is an error")
+Debug.LogWarning("This is a warning")
+Debug.LogError("This is an error")
 ```
 
 this will result in these messages in your console.
