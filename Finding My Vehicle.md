@@ -21,6 +21,10 @@ end
 ```
 
 Be sure to check if the returned object is null or not, using ``Slua.IsNull(object)``!
+Now, ``self.vehicle`` will be **the parent** of your vehicle pieces, if you don't split your vehicle (detachers, rotators, hinges, etc), then you don't need to worry about this,
+and you'll be able to change the values by using ``self.vehicle.transform.GetChild(0)``, preferably caching it after ``HBU.GetMyOldestVehicle()``, since there is a slight cost to this call.
+
+You can also see how many children your vehicle root actually has by using the ``transform.childCount`` property, so you can iterate over them as you please.
 
 Raycasting is also a bit strange in Lua, since Unity's raycasting system uses some explicit C# language agnostics, more specifically, the ``out`` parameter.
 
@@ -43,7 +47,7 @@ It's best to make a helper function for this
 
 ```lua
 function GetMyVehicles()
-  local vehicles = GameObject.FindObjectsOfType("VehiclePiece")
+  local vehicles = GameObject.FindObjectsOfType("VehicleRoot")
   local ret = {}
   for t in Slua.iter(vehicles) do
     local nc = t:GetComponent("NetworkBase")
@@ -56,4 +60,5 @@ function GetMyVehicles()
   return ret
 end
 ```
-Note that this function returns the vehicle pieces, so if you have a vehicle, with a detacher, you'll return 2 gameObjects!
+
+This function should return all the vehicles you have ownership of (**UNTESTED**)
