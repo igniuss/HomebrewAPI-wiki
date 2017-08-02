@@ -43,7 +43,7 @@ It's best to make a helper function for this
 
 ```lua
 function GetMyVehicles()
-  local vehicles = GameObject.FindObjectsOfType("VehicleRoot")
+  local vehicles = GameObject.FindObjectsOfType("VehiclePiece")
   local ret = {}
   for t in Slua.iter(vehicles) do
     local nc = t:GetComponent("NetworkBase")
@@ -56,5 +56,4 @@ function GetMyVehicles()
   return ret
 end
 ```
-
-This function should return all the vehicles you have ownership of (**UNTESTED**)
+Note that this function returns the vehicle pieces, so if you have a vehicle, with a detacher, you'll return 2 gameObjects!
