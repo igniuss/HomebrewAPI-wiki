@@ -62,3 +62,15 @@ end
 ```
 
 This function should return all the vehicles you have ownership of (**UNTESTED**)
+
+What about finding the vehicle you're currently in? Thankfully this isn't too hard.
+
+```lua
+function GetCurrentVehicle()
+  local vehicle = Camera.main.gameObject:GetComponentInParent("VehicleRoot")
+  if(vehicle == nil or Slua.IsNull(vehicle)) then return nil end
+  return vehicle
+end
+```
+
+As you can see, this is _really simple_ code, since your camera gets parented inside the vehicle when you enter it, it's super simple to get the vehicle root object, and subsequently, all the vehiclepieces of said vehicleroot.
