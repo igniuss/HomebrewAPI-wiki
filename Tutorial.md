@@ -28,7 +28,19 @@ And that's enough to have a 100% working gadget.
 ## Coding Time
 
 Next we'll insert the basic mechanics into our flashlight tool.
-Open up the Flashlight.lua file, and start by creating the functions we'll need
+Open up the Flashlight.lua file, and start by creating the main function, this is used to return the correct information to Homebrew.
+
+For this example we'll use _Flashlight_ as our main table name, but you can choose any name you'd like here (For instance, ``local gadget={}``).
+
+```lua
+local Flashlight = {}
+function main(gameObject)
+  Flashlight.gameObject = gameObject
+  return Flashlight
+end
+```
+
+Now we need to insert our unity callbacks, we'll use Start, to initialize our components, Update, so we can detect key presses to turn it on/off, and OnDestroy, to destroy the components we create in Start, incase we switch gadgets.
 
 ```lua
 function Flashlight:Start()
