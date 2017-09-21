@@ -10,8 +10,6 @@ Manually raycasting, and verifying it's a vehicle object.
 
 Getting every single vehicle in-game, and filtering out to only select your own.
 
-Or simply getting the vehicle you're currently in, using the Camera as a guide.
-
 The easiest would be using HBU to return your latest vehicle, this is rather simple
 
 ```lua

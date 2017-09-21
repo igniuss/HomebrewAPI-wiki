@@ -1,16 +1,10 @@
 # Debugging Lua Code
 
-- [Debugging Lua Code](#debugging-lua-code)
-  - [Unity Calls](#unity-calls)
-  - [Chat Debugger](#chat-debugger)
-  - [Seperate Console window](#seperate-console-window)
-  - [TODO](#todo)
-
-## Unity Calls
+## Unity Methods
 
 This is a tough one, since the lua you're making is very Homebrew specific (in most cases), it can be rather tough to debug values..
 
-Thankfully, we supply everyone with a Console (``home key`` to toggle it on/off), which will log each Debug message you put in.
+Thankfully, we supply everyone with a Console (´´home key`` to toggle it on/off), which will log each Debug message you put in.
 
 ![new_console](http://i.imgur.com/VzOyAnT.png)
 It's fairly easy to send specific kind of logs using the default Unity "Debug" class
@@ -76,7 +70,6 @@ which will result in the name being red
 ![red_error_log](http://i.imgur.com/fBupvJ4.png)
 
 ## Seperate Console window
-
 Alternatively, you can also open up a custom instance of the Console we supply, and only place debug messages of your own design in there.
 This is a bit more complex, but not too hard to figure out.
 
