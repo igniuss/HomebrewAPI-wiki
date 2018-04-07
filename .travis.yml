@@ -1,15 +1,19 @@
 script:
 - |
-  git config user.name "Igniuss"
-  git config user.email "slava_be@hotmail.com"
+  git config user.name "$USERNAME"
+  git config user.email "$EMAIL"
   git remote remove origin
+  echo "Removed origin"
   git remote add origin https://$GITHUB_API_KEY@github.com/igniuss/HomebrewAPI-wiki.git > /dev/null 2>&1
   git remote add upstream https://$GITHUB_API_KEY@github.com/copybugpaste/HomebrewAPI.wiki.git > /dev/null 2>&1
+  echo "Added origin and upstream"
   git fetch origin
   git fetch upstream
   git merge upstream/master --no-edit
+  echo "merged upstream/master --no-edit"
   git push origin HEAD:master > /dev/null 2>&1
   git push upstream HEAD:master > /dev/null 2>&1
+  echo "All done!"
 env:
   matrix:
     secure: J4e7132/bpdN75CPFCLPq9YtjvqS3dJzSlrS4yD3Gz06YpDwndRg2ynXXz2ifo0OWBOQzxonEzSm4Ua5v42hLCSoBPT+wfq+6xDqYYlLPfWxFXwdKJjsZObS9B2T5Mhc/V8AtVU1TBeTVg0/POFdXeKn14uDDcS/D9FVQhGPtti3GReFw+TPSLD6vJRnmAfVWdk0A1gsHwPNXTy9n7PfhFChRzhUaA/VKXefndmrrNifSXrodXcAnj+eB9ZoW0UJBFX0W0MvbWefXBMeok4JHVMf3kFZm7rJG1lmxgbUMaNdugsPa++V55fxBFKL28lzOtFWkbYi+LL81UaJ6GhFjvTVfrXxDtZKxz8NRFBkGy39Q5dGh52BdTPrFbptyy60quhctbPLkSNbE3thZEpHZHgtbX1s5xLPSA/3r9a2sSrZjZjUQTfZ9Xtd1ku7iMch1MYv2mtcVq6Gntz7CEFT1cWAZ9uWI3GWQbpc4PgoCUR/UTgw+2vGrp7P7MClsvOu7a1fTGUHUihQBNPGD1DLP7KcG6Fly+u3gJ+HngCI786xYO3tTczskVrJNk3GQVbryTWgh3LDdKTZAjsIzevtxecsqa/s4Vo9xYVQXRdRKS4AeksIWBGRH7po+QYAI60lByGvAEPe/MbkqQHBEt2xbwW5/kVqP9g3+ygws7R9JhI=
