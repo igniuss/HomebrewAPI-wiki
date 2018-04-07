@@ -21,4 +21,4 @@ We've also worked up a simple example on how you go about creating a custom Gadg
 
 ### Want to contribute to this Wiki?
 
-[Fork it and send a pull request.](https://github.com/copybugpaste/HomebrewAPI-wiki)
+[Fork it and send a pull request.](https://github.com/igniuss/HomebrewAPI-wiki)
