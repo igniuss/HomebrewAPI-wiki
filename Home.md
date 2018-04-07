@@ -14,3 +14,11 @@ You'll notice that the lua scripts in Homebrew look a little bit different then 
 most importantly, they all follow very strict coding rules. [See Examples](https://github.com/copybugpaste/HomebrewAPI/tree/master/Examples)
 
 We've also worked up a simple example on how you go about creating a custom Gadget, See [Tutorial](Tutorial)
+
+
+
+
+
+### Want to contribute to this Wiki?
+
+[Fork it and send a pull request.](https://github.com/copybugpaste/HomebrewAPI-wiki)
