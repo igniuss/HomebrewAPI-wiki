@@ -11,8 +11,8 @@ script:
   git fetch upstream
   git merge upstream/master --no-edit
   echo "merged upstream/master --no-edit"
-  git push origin HEAD:master > /dev/null 2>&1
-  git push upstream HEAD:master > /dev/null 2>&1
+  git push origin HEAD:master
+  git push upstream HEAD:master
   echo "All done!"
 env:
   matrix:
