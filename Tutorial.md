@@ -34,9 +34,10 @@ For this example we'll use _Flashlight_ as our main table name, but you can choo
 
 ```lua
 local Flashlight = {}
-
-
-return Flashlight
+function main(gameObject)
+  Flashlight.gameObject = gameObject
+  return Flashlight
+end
 ```
 
 Now we need to insert our unity callbacks, we'll use Start, to initialize our components, Update, so we can detect key presses to turn it on/off, and OnDestroy, to destroy the components we create in Start, incase we switch gadgets.
@@ -145,7 +146,6 @@ At the end, your files should look a bit like this
 ### Flashlight.lua
 
 ```lua
-local Flashlight={}
 function Flashlight:Start()
   self.useKey = HBU.GetKey("UseGadget")
   --Create objects
@@ -169,8 +169,6 @@ end
 function Flashlight:OnDestroy()
   GameObject.Destroy(self.obj) --since we create an object, we don't wanna add infinite amount of objects obviously ;)
 end
-
-return Flashlight
 ```
 
 ### Flashlight.info
