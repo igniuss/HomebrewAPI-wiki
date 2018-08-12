@@ -52,7 +52,7 @@ function GetMyVehicles()
   for t in Slua.iter(vehicles) do
     local nc = t:GetComponent("NetworkBase")
     if not Slua.IsNull(nc) then --make sure networkbase isn't nil
-      if nc.Owner then --make sure you're the owner of the vehicle
+      if nc.owner then --make sure you're the owner of the vehicle
         table.insert(ret, t) --insert it into your return table
       end
     end
